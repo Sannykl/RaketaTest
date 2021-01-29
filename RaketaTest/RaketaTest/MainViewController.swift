@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class MainViewController: UIViewController {
         prepareTableView()
         viewModel.delegate = self
         viewModel.loadData()
+        activityIndicator.isHidden = false
     }
     
     @objc private func refreshAction() {
@@ -32,6 +34,7 @@ extension MainViewController: MainViewModelDelegate {
     func postsDidLoad() {
         tableView.reloadData()
         refreshControl.endRefreshing()
+        activityIndicator.isHidden = true
     }
 }
 
@@ -63,6 +66,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostCell.self)) as! PostCell
         cell.fill(with: viewModel.cellViewModels[indexPath.row])
+        
+        cell.onImageTap = { [unowned self] url in
+            let imageVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: String(describing: ImageViewController.self)) as! ImageViewController
+            imageVC.imageURL = url
+            self.present(imageVC, animated: true, completion: nil)
+        }
+        
         viewModel.didShowPost(at: indexPath)
         return cell
     }

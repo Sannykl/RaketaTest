@@ -22,6 +22,7 @@
 		04F7592125C4087A0011B7C5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7592025C4087A0011B7C5 /* PostCell.swift */; };
 		04F7592525C408860011B7C5 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7592425C408860011B7C5 /* PostCell.xib */; };
 		04F7592D25C452360011B7C5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */; };
+		04F7593225C45E170011B7C5 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7593125C45E170011B7C5 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		04F7592025C4087A0011B7C5 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		04F7592425C408860011B7C5 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		04F7593125C45E170011B7C5 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				04F7591625C361E40011B7C5 /* ViewModels */,
 				0403C9EE25C2E2490063E489 /* Models */,
 				04F7591F25C4086B0011B7C5 /* Cells */,
+				04F7593025C45DFF0011B7C5 /* ImageViewController */,
 				0403C9D825C2E12F0063E489 /* MainViewController.swift */,
 				0403C9D425C2E12F0063E489 /* AppDelegate.swift */,
 				0403C9D625C2E12F0063E489 /* SceneDelegate.swift */,
@@ -132,6 +135,14 @@
 				04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		04F7593025C45DFF0011B7C5 /* ImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04F7593125C45E170011B7C5 /* ImageViewController.swift */,
+			);
+			path = ImageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 				0403C9D725C2E12F0063E489 /* SceneDelegate.swift in Sources */,
 				0479D1E325C313C600360DDE /* ResponseError.swift in Sources */,
 				04F7591825C361F20011B7C5 /* MainViewModel.swift in Sources */,
+				04F7593225C45E170011B7C5 /* ImageViewController.swift in Sources */,
 				04F7592125C4087A0011B7C5 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

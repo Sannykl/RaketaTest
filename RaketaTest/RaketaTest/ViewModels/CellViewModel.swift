@@ -34,7 +34,7 @@ struct CellViewModel: CellViewModelInterface {
     }
     
     func thumbnailURL() -> String? {
-        return model.data.thumbnail == "self" ? nil : model.data.thumbnail
+        return model.data.thumbnail.hasPrefix("https") ? model.data.thumbnail : nil
     }
     
     func imageURL() -> String? {
