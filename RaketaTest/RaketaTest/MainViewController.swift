@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareTableView()
         viewModel.delegate = self
         viewModel.loadData()
     }
@@ -24,15 +25,36 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewModelDelegate {
     
     func postsDidLoad() {
-        
+        tableView.reloadData()
     }
 }
 
-//extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return viewModel.cellViewModels.count
-//    }
-//
-//
-//}
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+
+    private func prepareTableView() {
+        tableView.register(UINib(nibName: String(describing: PostCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PostCell.self))
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.cellViewModels.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostCell.self)) as! PostCell
+        cell.fill(with: viewModel.cellViewModels[indexPath.row])
+        viewModel.didShowPost(at: indexPath)
+        return cell
+    }
+}

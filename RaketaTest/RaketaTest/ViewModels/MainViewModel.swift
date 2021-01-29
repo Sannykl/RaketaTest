@@ -18,6 +18,7 @@ class MainViewModel {
     private let requestManager = RequestManager()
     private var after: String?
     private let limit = 10
+    private var loadingInProgress = false
     
     func loadData() {
         makeRequest(cellViewModels)
@@ -28,7 +29,16 @@ class MainViewModel {
         makeRequest()
     }
     
+    func didShowPost(at indexPath: IndexPath) {
+        if indexPath.row >= cellViewModels.count - 3 {
+            loadData()
+        }
+    }
+    
     private func makeRequest(_ existingList: [CellViewModelInterface] = []) {
+        guard !loadingInProgress else { return }
+        loadingInProgress = true
+        
         var viewModels = existingList
         requestManager.loadTopItems(with: limit, after: after) { [weak self] (responseModel, error) in
             self?.after = responseModel?.data.after
@@ -38,7 +48,11 @@ class MainViewModel {
                 viewModels.append(viewModel)
             }
             self?.cellViewModels = viewModels
-            self?.delegate?.postsDidLoad()
+            
+            self?.loadingInProgress = false
+            DispatchQueue.main.async {
+                self?.delegate?.postsDidLoad()
+            }
         }
     }
 }

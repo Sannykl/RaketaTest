@@ -10,7 +10,6 @@ import Foundation
 protocol CellViewModelInterface {
     var titleString: String { get }
     var authorString: String { get }
-    var dateString: String { get }
     var commentsString: String { get }
 
     func thumbnailURL() -> String?
@@ -22,16 +21,16 @@ struct CellViewModel: CellViewModelInterface {
     
     var titleString: String
     var authorString: String
-    var dateString: String
     var commentsString: String
     
     init(model: PostModel) {
         self.model = model
         
         titleString = model.data.title
-        authorString = model.data.author
+        let dateString = CellViewModel.timeIntervalToDateString(timeInterval: TimeInterval(model.data.createdAt))
+
+        authorString = "Posted by \(model.data.author) - \(dateString)"
         commentsString = "\(model.data.commentsCount) Comments"
-        dateString = CellViewModel.timeIntervalToDateString(timeInterval: TimeInterval(model.data.createdAt))
     }
     
     func thumbnailURL() -> String? {
