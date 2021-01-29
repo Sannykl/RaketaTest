@@ -30,13 +30,13 @@ class MainViewModel {
     }
     
     func didShowPost(at indexPath: IndexPath) {
-        if indexPath.row >= cellViewModels.count - 3 {
+        if indexPath.row >= cellViewModels.count - 5 {
             loadData()
         }
     }
     
     private func makeRequest(_ existingList: [CellViewModelInterface] = []) {
-        guard !loadingInProgress else { return }
+        guard loadingInProgress == false else { return }
         loadingInProgress = true
         
         var viewModels = existingList

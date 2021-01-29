@@ -24,5 +24,12 @@ class PostCell: UITableViewCell {
         titleLabel.text = viewModel.titleString
         authorLabel.text = viewModel.authorString
         commentsLabel.text = viewModel.commentsString
+        if let url = viewModel.thumbnailURL() {
+            postImageView.loadImage(with: url, placeHolder: UIImage(named: "placeholder-image"))
+        }
+    }
+    
+    @objc private func showFullImage() {
+        
     }
 }

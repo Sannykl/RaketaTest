@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
 
     private let viewModel = MainViewModel()
     
+    private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -20,12 +21,17 @@ class MainViewController: UIViewController {
         viewModel.delegate = self
         viewModel.loadData()
     }
+    
+    @objc private func refreshAction() {
+        viewModel.reloadData()
+    }
 }
 
 extension MainViewController: MainViewModelDelegate {
     
     func postsDidLoad() {
         tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 }
 
@@ -37,6 +43,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
+        
+        refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

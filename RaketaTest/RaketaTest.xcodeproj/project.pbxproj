@@ -21,6 +21,7 @@
 		04F7591B25C361FD0011B7C5 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7591A25C361FD0011B7C5 /* CellViewModel.swift */; };
 		04F7592125C4087A0011B7C5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7592025C4087A0011B7C5 /* PostCell.swift */; };
 		04F7592525C408860011B7C5 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7592425C408860011B7C5 /* PostCell.xib */; };
+		04F7592D25C452360011B7C5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		04F7591A25C361FD0011B7C5 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		04F7592025C4087A0011B7C5 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		04F7592425C408860011B7C5 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		04F7592725C40AAF0011B7C5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				0403C9D925C2E12F0063E489 /* MainViewController.swift in Sources */,
 				0403C9F425C2E25D0063E489 /* PostModel.swift in Sources */,
+				04F7592D25C452360011B7C5 /* UIImageView+Extension.swift in Sources */,
 				0403C9D525C2E12F0063E489 /* AppDelegate.swift in Sources */,
 				0479D1E225C313C600360DDE /* RequestManager.swift in Sources */,
 				04F7591B25C361FD0011B7C5 /* CellViewModel.swift in Sources */,
