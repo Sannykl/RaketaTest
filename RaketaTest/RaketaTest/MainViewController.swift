@@ -9,11 +9,30 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    private let viewModel = MainViewModel()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        viewModel.delegate = self
+        viewModel.loadData()
     }
-
-
 }
 
+extension MainViewController: MainViewModelDelegate {
+    
+    func postsDidLoad() {
+        
+    }
+}
+
+//extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return viewModel.cellViewModels.count
+//    }
+//
+//
+//}
