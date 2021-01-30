@@ -165,8 +165,8 @@
 				04F7596025C5DB890011B7C5 /* ResponseInfo+CoreDataProperties.swift */,
 				04F7596125C5DB890011B7C5 /* Post+CoreDataClass.swift */,
 				04F7596225C5DB890011B7C5 /* Post+CoreDataProperties.swift */,
-				04F7593525C465770011B7C5 /* RaketaTest.xcdatamodeld */,
 				04F7595B25C5DAB80011B7C5 /* CoreDataManager.swift */,
+				04F7593525C465770011B7C5 /* RaketaTest.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";

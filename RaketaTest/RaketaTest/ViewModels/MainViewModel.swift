@@ -13,6 +13,8 @@ protocol MainViewModelDelegate: AnyObject {
 
 class MainViewModel {
     var cellViewModels: [CellViewModelInterface] = []
+    var hideActivityIndicator: Bool = false
+    
     weak var delegate: MainViewModelDelegate?
     
     private let requestManager = RequestManager()
@@ -22,6 +24,7 @@ class MainViewModel {
     
     init() {
         if CoreDataManager.hasData() {
+            hideActivityIndicator = true
             prepareCoreDataViewModels()
         } else {
             loadData()
