@@ -14,5 +14,4 @@ struct ResponseModel: Codable {
 struct ResponseData: Codable {
     let children: [PostModel]
     let after: String?
-    let before: String?
 }

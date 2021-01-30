@@ -23,6 +23,12 @@
 		04F7592525C408860011B7C5 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7592425C408860011B7C5 /* PostCell.xib */; };
 		04F7592D25C452360011B7C5 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */; };
 		04F7593225C45E170011B7C5 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7593125C45E170011B7C5 /* ImageViewController.swift */; };
+		04F7593725C465770011B7C5 /* RaketaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F7593525C465770011B7C5 /* RaketaTest.xcdatamodeld */; };
+		04F7595C25C5DAB80011B7C5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7595B25C5DAB80011B7C5 /* CoreDataManager.swift */; };
+		04F7596325C5DB890011B7C5 /* ResponseInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7595F25C5DB890011B7C5 /* ResponseInfo+CoreDataClass.swift */; };
+		04F7596425C5DB890011B7C5 /* ResponseInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7596025C5DB890011B7C5 /* ResponseInfo+CoreDataProperties.swift */; };
+		04F7596525C5DB890011B7C5 /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7596125C5DB890011B7C5 /* Post+CoreDataClass.swift */; };
+		04F7596625C5DB890011B7C5 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7596225C5DB890011B7C5 /* Post+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +50,12 @@
 		04F7592425C408860011B7C5 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		04F7592C25C452360011B7C5 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		04F7593125C45E170011B7C5 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		04F7593625C465770011B7C5 /* RaketaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RaketaTest.xcdatamodel; sourceTree = "<group>"; };
+		04F7595B25C5DAB80011B7C5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		04F7595F25C5DB890011B7C5 /* ResponseInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseInfo+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		04F7596025C5DB890011B7C5 /* ResponseInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseInfo+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		04F7596125C5DB890011B7C5 /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		04F7596225C5DB890011B7C5 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 		0403C9D325C2E12F0063E489 /* RaketaTest */ = {
 			isa = PBXGroup;
 			children = (
+				04F7594325C468E80011B7C5 /* CoreData */,
 				04F7592725C40AAF0011B7C5 /* Extension */,
 				0479D1DF25C313A500360DDE /* RequestManager */,
 				04F7591625C361E40011B7C5 /* ViewModels */,
@@ -143,6 +156,19 @@
 				04F7593125C45E170011B7C5 /* ImageViewController.swift */,
 			);
 			path = ImageViewController;
+			sourceTree = "<group>";
+		};
+		04F7594325C468E80011B7C5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				04F7595F25C5DB890011B7C5 /* ResponseInfo+CoreDataClass.swift */,
+				04F7596025C5DB890011B7C5 /* ResponseInfo+CoreDataProperties.swift */,
+				04F7596125C5DB890011B7C5 /* Post+CoreDataClass.swift */,
+				04F7596225C5DB890011B7C5 /* Post+CoreDataProperties.swift */,
+				04F7593525C465770011B7C5 /* RaketaTest.xcdatamodeld */,
+				04F7595B25C5DAB80011B7C5 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,16 +244,22 @@
 			files = (
 				0403C9D925C2E12F0063E489 /* MainViewController.swift in Sources */,
 				0403C9F425C2E25D0063E489 /* PostModel.swift in Sources */,
+				04F7593725C465770011B7C5 /* RaketaTest.xcdatamodeld in Sources */,
 				04F7592D25C452360011B7C5 /* UIImageView+Extension.swift in Sources */,
 				0403C9D525C2E12F0063E489 /* AppDelegate.swift in Sources */,
+				04F7595C25C5DAB80011B7C5 /* CoreDataManager.swift in Sources */,
+				04F7596525C5DB890011B7C5 /* Post+CoreDataClass.swift in Sources */,
+				04F7596425C5DB890011B7C5 /* ResponseInfo+CoreDataProperties.swift in Sources */,
 				0479D1E225C313C600360DDE /* RequestManager.swift in Sources */,
 				04F7591B25C361FD0011B7C5 /* CellViewModel.swift in Sources */,
 				0403C9F025C2E2550063E489 /* ResponseModel.swift in Sources */,
+				04F7596625C5DB890011B7C5 /* Post+CoreDataProperties.swift in Sources */,
 				0403C9D725C2E12F0063E489 /* SceneDelegate.swift in Sources */,
 				0479D1E325C313C600360DDE /* ResponseError.swift in Sources */,
 				04F7591825C361F20011B7C5 /* MainViewModel.swift in Sources */,
 				04F7593225C45E170011B7C5 /* ImageViewController.swift in Sources */,
 				04F7592125C4087A0011B7C5 /* PostCell.swift in Sources */,
+				04F7596325C5DB890011B7C5 /* ResponseInfo+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +463,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04F7593525C465770011B7C5 /* RaketaTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04F7593625C465770011B7C5 /* RaketaTest.xcdatamodel */,
+			);
+			currentVersion = 04F7593625C465770011B7C5 /* RaketaTest.xcdatamodel */;
+			path = RaketaTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0403C9C925C2E12F0063E489 /* Project object */;
 }

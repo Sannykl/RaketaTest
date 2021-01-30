@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Post" representedClassName="Post" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="comments" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="sortPosition" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ResponseInfo" representedClassName="ResponseInfo" syncable="YES">
+        <attribute name="afterString" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ResponseInfo" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Post" positionX="-54" positionY="-9" width="128" height="134"/>
+    </elements>
+</model>

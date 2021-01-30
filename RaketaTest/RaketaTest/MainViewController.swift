@@ -13,15 +13,12 @@ class MainViewController: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareTableView()
         viewModel.delegate = self
-        viewModel.loadData()
-        activityIndicator.isHidden = false
+        prepareTableView()
     }
     
     @objc private func refreshAction() {
@@ -34,7 +31,6 @@ extension MainViewController: MainViewModelDelegate {
     func postsDidLoad() {
         tableView.reloadData()
         refreshControl.endRefreshing()
-        activityIndicator.isHidden = true
     }
 }
 

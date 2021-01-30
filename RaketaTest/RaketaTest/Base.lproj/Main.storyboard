@@ -20,10 +20,6 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7kM-Oe-wmw">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" systemColor="labelColor"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,13 +27,10 @@
                             <constraint firstItem="Ghk-hJ-Bj4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4bo-bE-MLy"/>
                             <constraint firstItem="Ghk-hJ-Bj4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zoy-Bw-Hk2"/>
                             <constraint firstItem="Ghk-hJ-Bj4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="feH-Qw-hzV"/>
-                            <constraint firstItem="7kM-Oe-wmw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gY4-SY-yoZ"/>
-                            <constraint firstItem="7kM-Oe-wmw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hSm-ad-120"/>
                             <constraint firstItem="Ghk-hJ-Bj4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qya-6s-qTv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="7kM-Oe-wmw" id="SeG-bV-r8C"/>
                         <outlet property="tableView" destination="Ghk-hJ-Bj4" id="xcR-fo-gei"/>
                     </connections>
                 </viewController>
@@ -92,9 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

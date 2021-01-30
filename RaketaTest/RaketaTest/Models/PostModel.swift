@@ -9,6 +9,10 @@ import Foundation
 
 struct PostModel: Codable {
     let data: PostData
+    
+    init(managedObject: Post) {
+        data = PostData(managedObject: managedObject)
+    }
 }
 
 struct PostData: Codable {
@@ -26,5 +30,14 @@ struct PostData: Codable {
         case thumbnail
         case commentsCount = "num_comments"
         case imageURL = "url"
+    }
+    
+    init(managedObject: Post) {
+        title = managedObject.title ?? ""
+        author = managedObject.author ?? ""
+        createdAt = Int(managedObject.createdAt)
+        thumbnail = managedObject.thumbnail ?? ""
+        commentsCount = Int(managedObject.comments)
+        imageURL = managedObject.imageURL ?? ""
     }
 }
