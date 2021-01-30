@@ -38,7 +38,7 @@ struct CellViewModel: CellViewModelInterface {
     }
     
     func imageURL() -> String? {
-        return thumbnailURL() == nil ? nil : model.data.imageURL
+        return (model.data.imageURL.hasSuffix("png") || model.data.imageURL.hasSuffix("jpg")) ? model.data.imageURL : nil
     }
 }
 
